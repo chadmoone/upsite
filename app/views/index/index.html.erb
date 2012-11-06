@@ -1,0 +1,8 @@
+<h1>Site Status</h1>
+<ul>
+<% @sites.each do |site| %>
+
+<li class="<%= site.up? ? 'success' : 'failure' %>"><%= site.name %>: <%= site.up? ? 'UP' : 'DOWN' %></li>
+
+<% end -%>
+</ul>
